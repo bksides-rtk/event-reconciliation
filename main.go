@@ -5,6 +5,10 @@ import (
 	"fmt"
 
 	"github.com/rtk-tickets/common/models/events"
+	"github.com/rtk-tickets/common/util/database"
+	dbTypes "github.com/rtk-tickets/common/util/database/types"
+	"github.com/rtk-tickets/common/util/logging"
+	"github.com/rtk-tickets/common/util/nothing"
 )
 
 func main() {
@@ -79,9 +83,27 @@ func main() {
 		}
 		fmt.Printf("\tDiff: %+v\n", string(rtkInfoJson))
 
-		updateCanonical(dbPostgres, *canonicalInfo.ID, diff)
-		markNonCanonicalsForDelete(dbPostgres, mapSlice(rtkInfos, func(info events.Event) uint64 {
-			return *info.ID
-		}))
+		_, err = database.Transact(logging.NewNopLogger(), dbTypes.DBUserFromIface(dbPostgres), func(dbPostgresUser dbTypes.DBIfaceUser) (nothing.Nothing, error) {
+			dbPostgres := dbPostgresUser.GetDB()
+
+			err := updateCanonical(dbPostgres, *canonicalInfo.ID, diff)
+			if err != nil {
+				return nothing.Nothing{}, err
+			}
+
+			err = markNonCanonicalsForDelete(dbPostgres, mapSlice(rtkInfos, func(info events.Event) uint64 {
+				return *info.ID
+			}))
+			if err != nil {
+				return nothing.Nothing{}, err
+			}
+
+			return nothing.Nothing{}, nil
+		})
+		if err != nil {
+			panic(err)
+		}
+
+		fmt.Println("\n----------------------------------------\n")
 	}
 }

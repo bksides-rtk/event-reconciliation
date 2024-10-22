@@ -115,7 +115,7 @@ func getDuplicatedEvents(dbPostgres *sql.DB) (map[uint64][]events.Event, error) 
 	return duplicatedEvents, nil
 }
 
-func updateCanonical(dbPostgres *sql.DB, id uint64, diff events.Event) error {
+func updateCanonical(dbPostgres dbTypes.DBIface, id uint64, diff events.Event) error {
 	logger, _ := logging.NewBasicLogger(logging.BasicLoggerConfig{
 		Level: logging.LogLevelDebug,
 	})
@@ -154,7 +154,7 @@ func updateCanonical(dbPostgres *sql.DB, id uint64, diff events.Event) error {
 	return err
 }
 
-func markNonCanonicalsForDelete(dbPostgres *sql.DB, ids []uint64) error {
+func markNonCanonicalsForDelete(dbPostgres dbTypes.DBIface, ids []uint64) error {
 	logger, _ := logging.NewBasicLogger(logging.BasicLoggerConfig{
 		Level: logging.LogLevelDebug,
 	})

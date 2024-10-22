@@ -1,3 +1,4 @@
+github.com/DATA-DOG/go-sqlmock v1.5.0 h1:Shsta01QNfFxHCfpW6YH2STWB0MudeXXEWMr20OEh60=
 github.com/DATA-DOG/go-sqlmock v1.5.0/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
 github.com/ansd/lastpass-go v0.4.0 h1:xYgZZ4I1H5NFhWlH+6s4jfhdWxjeZ7h8dbDxlY4SLIc=
 github.com/ansd/lastpass-go v0.4.0/go.mod h1:5/dRs8Ar+qLNi/64Rl7G6LMFtlxKHTZXLJvSMVp1slQ=
@@ -86,10 +87,9 @@ github.com/onsi/gomega v1.20.2 h1:8uQq0zMgLEfa0vRrrBgaJF2gyW9Da9BmfGV+OyUzfkY=
 github.com/onsi/gomega v1.20.2/go.mod h1:iYAIXgPSaDHak0LCMA+AWBpIKBr8WZicMxnE8luStNc=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/rtk-tickets/common v0.0.0-20241017174947-265e2b5b89d2 h1:oH6hvJnkwWAsuUqOhjmQA++Qi1duZgaqMmRp/kpoR9A=
-github.com/rtk-tickets/common v0.0.0-20241017174947-265e2b5b89d2/go.mod h1:Cflolohi3TqFAOfCdxw/AZJlYldAVJeXrF0CrA5jsS0=
 github.com/rtk-tickets/common v0.0.0-20241022172357-5bad25cf77d9 h1:4JzXzXjX4SC2PJa8DEvJsvl/GK2uT4NsFIv2ERDjxK0=
 github.com/rtk-tickets/common v0.0.0-20241022172357-5bad25cf77d9/go.mod h1:tnB9WYAtuDmQqc1h6c9rlGTV3OvVzZoeLfGozlggt7Y=
+github.com/stretchr/objx v0.1.0 h1:4G4v2dO3VZwixGIRoQ5Lfboy6nUhCyYzaqnIAPPhYs4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
 github.com/stretchr/testify v1.5.1/go.mod h1:5W2xD1RspED5o8YsWQXVCued0rvSQ+mT+I5cxcmMvtA=
