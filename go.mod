@@ -23,8 +23,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.28.2 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.32.2 // indirect
 	github.com/aws/smithy-go v1.22.0 // indirect
-	github.com/doug-martin/goqu/v9 v9.19.0 // indirect
-	github.com/stretchr/testify v1.7.0 // indirect
+	github.com/doug-martin/goqu/v9 v9.19.0
 	go.deanishe.net/env v0.5.1 // indirect
 	golang.org/x/crypto v0.28.0 // indirect
 	golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c // indirect

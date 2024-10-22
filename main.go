@@ -8,12 +8,12 @@ import (
 )
 
 func main() {
-	vault, err := connectDefaultVault()
+	vault, err := connectVault()
 	if err != nil {
 		panic(err)
 	}
 
-	dbPostgres, err := connectDefaultDB(vault)
+	dbPostgres, err := connectDB(vault)
 	if err != nil {
 		panic(err)
 	}
